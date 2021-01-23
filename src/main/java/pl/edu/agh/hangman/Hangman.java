@@ -3,7 +3,7 @@ package pl.edu.agh.hangman;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-=======
+
 import java.util.Arrays;
 
 import com.sun.tools.javac.util.List;
@@ -69,14 +69,14 @@ public class Hangman {
         	
     	System.out.println(pz.getPuzzle());
 
-    	ArrayList<String> guesletters = new ArrayList<String>();
+    	ArrayList<String> guessletters = new ArrayList<String>();
     	
-    	guesletters.add(guess);
-    	
-    	System.out.println(Guess());
+    	guessletters.add(guess());
+    	guessletters.add(guess());
+    	System.out.println(guessletters);
 
     	
-    	guessChecker.checkGuess("kot", Arrays.asList("o"));
+    	guessChecker.checkGuess(pz.getPuzzle(), Arrays.asList(guessletters));
     	
     	
     	
@@ -85,13 +85,12 @@ public class Hangman {
 
 
 
-	public String guess() {
+	public static String guess() {
 		Scanner scanner = new Scanner(System.in);	
 		String guess = "11";
 		while (guess.length() != 1) {
 			guess = scanner.next();
-		}
-		
+		}	
 		return guess;
 		}
 }
