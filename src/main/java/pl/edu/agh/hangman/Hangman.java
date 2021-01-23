@@ -1,5 +1,6 @@
 package pl.edu.agh.hangman;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Hangman {
@@ -61,18 +62,10 @@ public class Hangman {
     	
     	System.out.println(pz.getPuzzle());
     	
+    	System.out.println(guess());
     }
-    
-    public char guess() {
-		Scanner scanner = new Scanner(System.in);	
-		String guess = null;
-		while (guess.length() != 1) {
-			guess = scanner.next();
 
-		}
-		return guess.charAt(0);
-		}
-    
-    
+
+
     
 }
