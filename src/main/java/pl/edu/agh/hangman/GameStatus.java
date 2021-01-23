@@ -11,7 +11,6 @@ public class GameStatus {
 				counter++;
 			}
 		}
-
 		if (counter < 7) {
 			String status = Hangman.HANGMANPICS[counter];
 			System.out.println(status);
