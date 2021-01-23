@@ -56,16 +56,27 @@ public class Hangman {
                     "      |\n" +
                     "========"
     };
-
+    
     public static void main(String[] args) {
     	PuzzleFactory pz = new PuzzleFactory();
     	
     	System.out.println(pz.getPuzzle());
+    	ArrayList<String> guesletters = new ArrayList<String>();
     	
-    	System.out.println(guess());
+    	guesletters.add(guess);
+    	
+    	System.out.println(Guess());
     }
 
 
 
-    
+	public String guess() {
+		Scanner scanner = new Scanner(System.in);	
+		String guess = "11";
+		while (guess.length() != 1) {
+			guess = scanner.next();
+		}
+		
+		return guess;
+		}
 }
