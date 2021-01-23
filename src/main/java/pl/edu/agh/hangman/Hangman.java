@@ -70,20 +70,28 @@ public class Hangman {
         	
     	System.out.println(pz.getPuzzle());
 
-    	ArrayList<String> guessletters = new ArrayList<String>();
+    	ArrayList<String> guessLetters = new ArrayList<String>();
     	
-    	guessletters.add(guess());
-    	guessletters.add(guess());
-    	System.out.println(guessletters);
+//    	guessLetters.add(guess());
+//   	guessLetters.add(guess());
+    	System.out.println(guessLetters);
 
     	
 
-    	guessChecker.checkGuess(pz.getPuzzle(), Arrays.asList(guessletters));
+  //  	guessChecker.checkGuess(pz.getPuzzle(), guessLetters);
 
-    	guessChecker.checkGuess("kot", Arrays.asList("o"));
-    	status.printStatus("kot", Arrays.asList("o", "s"));
-    	
+    //	guessChecker.checkGuess(pz.getPuzzle(), Arrays.asList("o"));
+    //	status.printStatus("kot", Arrays.asList("o", "s"));
+    	//ponizszy kod jest wlasciwy
     	System.out.println("Lets start!");
+		System.out.println("Type a letter!");
+    	
+    	while (guess() != "0") {
+    		guessLetters.add(guess());
+    		guessChecker.checkGuess(pz.getPuzzle(), guessLetters);
+    		status.printStatus(pz.getPuzzle(), guessLetters);
+    	}
+    	
 
     	
     	
@@ -95,8 +103,9 @@ public class Hangman {
 
 	public static String guess() {
 		Scanner scanner = new Scanner(System.in);	
-		String guess = "11";
+		String guess = scanner.next();
 		while (guess.length() != 1) {
+			System.out.println("Wpisz jedna litere");
 			guess = scanner.next();
 		}	
 		return guess;
