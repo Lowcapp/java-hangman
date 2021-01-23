@@ -75,7 +75,7 @@ public class Hangman {
 //    	guessLetters.add(guess());
 //   	guessLetters.add(guess());
     //	System.out.println(guessLetters);
-
+//String stopped = "1";
     	
 
   //  	guessChecker.checkGuess(pz.getPuzzle(), guessLetters);
@@ -91,6 +91,7 @@ public class Hangman {
     		System.out.println(guessLetters);
     		guessChecker.checkGuess(pz.getPuzzle(), guessLetters);
     		status.printStatus(pz.getPuzzle(), guessLetters);
+    		
     	}
     	
 
