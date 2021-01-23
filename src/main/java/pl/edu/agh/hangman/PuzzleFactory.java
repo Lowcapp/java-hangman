@@ -19,9 +19,9 @@ public class PuzzleFactory {
 		}
 	}
 	
-	public char[] getPuzzle() {
+	public String getPuzzle() {
 		readLines();
-		String puzzle = lines.get(rand.nextInt(lines.size())).toLowerCase();
-		return puzzle.toCharArray();
+		return lines.get(rand.nextInt(lines.size())).toLowerCase();
+		
 	}
 }

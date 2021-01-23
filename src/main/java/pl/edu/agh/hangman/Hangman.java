@@ -1,5 +1,9 @@
 package pl.edu.agh.hangman;
 
+import java.util.Arrays;
+
+import com.sun.tools.javac.util.List;
+
 public class Hangman {
 
     public static final String[] HANGMANPICS = new String[]{
@@ -53,10 +57,17 @@ public class Hangman {
                     "      |\n" +
                     "========"
     };
+	
 
     public static void main(String[] args) {
     	PuzzleFactory pz = new PuzzleFactory();
-    	
+    	GuessChecker guessChecker = new GuessChecker();
+        	
     	System.out.println(pz.getPuzzle());
+    	
+    	guessChecker.checkGuess("kot", Arrays.asList("o"));
+    	
+    	
+    	
     }
 }
